@@ -194,16 +194,6 @@ def expandDesKey(key):
           (ord(key[6:7]) & 0x7f) << 1
         ]
     return bytes(s)
-    #else:
-    #    s = chr(((ord(key[0]) >> 1) & 0x7f) << 1)
-    #    s = s + chr(((ord(key[0]) & 0x01) << 6 | ((ord(key[1]) >> 2) & 0x3f)) << 1)
-    #    s = s + chr(((ord(key[1]) & 0x03) << 5 | ((ord(key[2]) >> 3) & 0x1f)) << 1)
-    #    s = s + chr(((ord(key[2]) & 0x07) << 4 | ((ord(key[3]) >> 4) & 0x0f)) << 1)
-    #    s = s + chr(((ord(key[3]) & 0x0f) << 3 | ((ord(key[4]) >> 5) & 0x07)) << 1)
-    #    s = s + chr(((ord(key[4]) & 0x1f) << 2 | ((ord(key[5]) >> 6) & 0x03)) << 1)
-    #    s = s + chr(((ord(key[5]) & 0x3f) << 1 | ((ord(key[6]) >> 7) & 0x01)) << 1)
-    #    s = s + chr((ord(key[6]) & 0x7f) << 1)
-    #    return bytes(s)
 
 
 def DESL(K, D):
