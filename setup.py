@@ -1,10 +1,7 @@
 import sys, os
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
 
-pkgdir = { '': 'python%s' % sys.version_info[0] }
+pkgdir = {'': 'smb3'}
 
 setup(
     name = "pysmb",
