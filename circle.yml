@@ -3,7 +3,7 @@ machine:
     - sudo su -c "useradd smbtest -U -s /bin/bash -m"
     - sudo apt-get update;
     - sudo apt-get install samba p7zip;
-    - p7zip -d tests/smbtest.7z
+    - p7zip -d pysmb/tests/smbtest.7z
     - sudo mv smbtest/smb.conf /etc/samba/
     - sudo mv smbtest /tmp
     - sudo chown smbtest:smbtest /tmp/smbtest
