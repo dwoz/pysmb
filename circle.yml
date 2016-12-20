@@ -1,6 +1,6 @@
 machine:
   pre:
-    - sudo su -c "useradd smbtest -s /bin/bash -m -g smbtest -G smbtest"
+    - sudo su -c "useradd smbtest -U -s /bin/bash -m"
     - sudo apt-get update;
     - sudo apt-get install samba p7zip;
     - p7zip -d tests/smbtest.7z
