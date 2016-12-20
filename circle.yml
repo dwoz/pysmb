@@ -10,3 +10,5 @@ machine:
     - sudo find /tmp/smbtest -type d -exec chmod 775 {} \;
     - sudo find /tmp/smbtest -type f -exec chmod 664 {} \;
     - sudo /etc/init.d/samba restart
+  post:
+    - pyenv global 2.7.9 3.4.2
