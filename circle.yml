@@ -11,4 +11,4 @@ machine:
     - sudo chown smbtest:smbtest /tmp/smbtest
     - sudo find /tmp/smbtest -type d -exec chmod 775 {} \;
     - sudo find /tmp/smbtest -type f -exec chmod 664 {} \;
-    - sudo /etc/init.d/samba restart && true
+    - sudo /etc/init.d/samba reload
