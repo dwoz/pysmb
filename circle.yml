@@ -1,0 +1,12 @@
+machine:
+  pre:
+    - sudo su -c "useradd smbtest -s /bin/bash -m -g smbtest -G smbtest"
+    - sudo apt-get update;
+    - sudo apt-get install samba p7zip;
+    - p7zip -d tests/smbtest.7z
+    - sudo mv smbtest/smb.conf /etc/samba/
+    - sudo mv smbtest /tmp
+    - sudo chown smbtest:smbtest /tmp/smbtest
+    - sudo find /tmp/smbtest -type d -exec chmod 775 {} \;
+    - sudo find /tmp/smbtest -type f -exec chmod 664 {} \;
+    - sudo /etc/init.d/samba restart
