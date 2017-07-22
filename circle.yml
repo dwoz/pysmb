@@ -14,4 +14,4 @@ machine:
     - sudo /etc/init.d/samba reload
 dependencies:
   post:
-    - pyenv local 3.4.3 3.3.3 3.2.5 3.1.5 2.7.10 2.6.8
+    - pyenv local 3.4.3 2.7.10 2.6.8
